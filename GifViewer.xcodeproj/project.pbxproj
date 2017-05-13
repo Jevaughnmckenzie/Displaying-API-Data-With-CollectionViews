@@ -14,6 +14,7 @@
 		A8552D391EC67F4000CF1B8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8552D371EC67F4000CF1B8E /* LaunchScreen.storyboard */; };
 		A8552D451EC6811300CF1B8E /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8552D441EC6811300CF1B8E /* CollectionViewController.m */; };
 		A8552D481EC683DC00CF1B8E /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8552D471EC683DC00CF1B8E /* CollectionViewCell.m */; };
+		A8552D4B1EC77D3200CF1B8E /* Giphy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8552D4A1EC77D3200CF1B8E /* Giphy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		A8552D441EC6811300CF1B8E /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewController.m; path = ../CollectionViewController.m; sourceTree = "<group>"; };
 		A8552D461EC683DC00CF1B8E /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		A8552D471EC683DC00CF1B8E /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		A8552D491EC77D3200CF1B8E /* Giphy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Giphy.h; sourceTree = "<group>"; };
+		A8552D4A1EC77D3200CF1B8E /* Giphy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Giphy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				A8552D441EC6811300CF1B8E /* CollectionViewController.m */,
 				A8552D461EC683DC00CF1B8E /* CollectionViewCell.h */,
 				A8552D471EC683DC00CF1B8E /* CollectionViewCell.m */,
+				A8552D491EC77D3200CF1B8E /* Giphy.h */,
+				A8552D4A1EC77D3200CF1B8E /* Giphy.m */,
 				A8552D321EC67F4000CF1B8E /* Main.storyboard */,
 				A8552D351EC67F4000CF1B8E /* Assets.xcassets */,
 				A8552D371EC67F4000CF1B8E /* LaunchScreen.storyboard */,
@@ -157,6 +162,7 @@
 			files = (
 				A8552D2E1EC67F4000CF1B8E /* AppDelegate.m in Sources */,
 				A8552D2B1EC67F4000CF1B8E /* main.m in Sources */,
+				A8552D4B1EC77D3200CF1B8E /* Giphy.m in Sources */,
 				A8552D481EC683DC00CF1B8E /* CollectionViewCell.m in Sources */,
 				A8552D451EC6811300CF1B8E /* CollectionViewController.m in Sources */,
 			);

@@ -90,9 +90,7 @@ static NSString * const reuseIdentifier = @"GifViewerCell";
     
     // Configure the cell
     NSString *urlString = self.imageURLs[indexPath.row];
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSData *imageData = [[NSData alloc] initWithContentsOfURL:url];
-    cell.imageView.image = [UIImage imageWithData:imageData];
+    cell.urlString = urlString;
     
     return cell;
 }
