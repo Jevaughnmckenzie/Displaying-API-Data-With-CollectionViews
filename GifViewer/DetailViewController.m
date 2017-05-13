@@ -35,13 +35,29 @@
                                        action:@selector(dismiss)];
     dismiss.numberOfTapsRequired = 1;
     [self.view addGestureRecognizer:dismiss];
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRightToDismiss)];
+    swipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipe];
 }
 
 -(void) dismiss{
-    [self dismissViewControllerAnimated:YES completion:nil];
     
+    [UIView animateWithDuration:0.75 animations:^{
+        self.view.transform = CGAffineTransformMakeScale(0.01, 0.01);
+        self.view.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
     
-    
+}
+
+-(void) swipeRightToDismiss {
+    [UIView animateWithDuration:0.5 animations:^{
+        self.view.transform = CGAffineTransformMakeTranslation(400, 0);
+    } completion:^(BOOL finished) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
