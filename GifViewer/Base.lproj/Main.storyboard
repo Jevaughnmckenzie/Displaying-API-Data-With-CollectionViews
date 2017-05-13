@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,6 +45,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="toO-Cf-v7e" id="pRE-WJ-L1U"/>
+                                    <segue destination="kxm-QS-6cE" kind="showDetail" identifier="showDetail" id="hgV-S8-HG5"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -56,6 +58,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xM-pE-GUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-217" y="-9"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="HkC-XG-UAC">
+            <objects>
+                <viewController id="kxm-QS-6cE" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o2A-8h-JQh"/>
+                        <viewControllerLayoutGuide type="bottom" id="svW-HW-eOt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wly-WP-o22">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-PZ-0Ur">
+                                <rect key="frame" x="26" y="133.5" width="323" height="400"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="BTC-fv-iPr"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="OWC-PZ-0Ur" secondAttribute="trailing" constant="10" id="kT0-uo-LNC"/>
+                            <constraint firstItem="OWC-PZ-0Ur" firstAttribute="centerY" secondItem="wly-WP-o22" secondAttribute="centerY" id="peU-K7-eXi"/>
+                            <constraint firstItem="OWC-PZ-0Ur" firstAttribute="leading" secondItem="wly-WP-o22" secondAttribute="leadingMargin" constant="10" id="qdv-U6-WMu"/>
+                            <constraint firstItem="OWC-PZ-0Ur" firstAttribute="centerX" secondItem="wly-WP-o22" secondAttribute="centerX" id="z7Z-sQ-idi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="OWC-PZ-0Ur" id="vtL-Gd-jvC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMn-0X-7cS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="-9"/>
         </scene>
     </scenes>
 </document>
